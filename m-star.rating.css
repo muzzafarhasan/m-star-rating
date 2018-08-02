@@ -1,0 +1,22 @@
+/*!
+ * Jquery Bootstrap Rating v0.0.1-beta
+ * Copyright 2018-2019 Muzafar Hasan
+ * JQuery Required 2.xx
+ * Fontawesome Required 4.xx * 
+ */
+
+.user-rating span{
+	text-align: right;
+	display: block;
+}
+.user-rating i{
+	text-align: left;
+	display: inline-block;
+}
+.user-rating i:hover{
+	color:#ff0000;
+}
+
+.star-color {
+    color:#fd7e14;
+}
