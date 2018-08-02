@@ -15,5 +15,5 @@
   $("#exampleid").StarRating(StarCount, StarSize);
 * Call jQuery method to get value
   $("#exampleid").GetStarRating();
-  * Call jQuery method to set value
+* Call jQuery method to set value
   $("#exampleid").SetStarRating(StarCount);
