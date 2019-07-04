@@ -49,16 +49,18 @@
 
         $(ObjStarRating).empty();
         $(ObjStarRating).addClass("user-rating");
+        $(ObjStarRating).attr('data-starrating', 0);
+        $(ObjStarRating).data('starrating', 0);
 
         for (var i = 1; i <= starCount; i++) {
-            $(this).append('<a class="rate-user" href="#"><i data-rating="' + i + '" class="fa fa-star-o' + starSize + '"></i></a>');
+            $(this).append('<a class="rate-user" href="javascript:void(0)"><i data-rating="' + i + '" class="fa fa-star-o' + starSize + '"></i></a>');
         }
 
         $(".rate-user").click(function () {
             var ratingValue = $(this).children().data('rating');
-            var ratingObj = $(this).parent().children();
+            $(this).parent().data('starrating', ratingValue);
 
-            $(ObjStarRating).data('starrating', ratingValue);
+            var ratingObj = $(this).parent().children();
 
             for (var j = 0; j < ratingObj.length; j++) {
                 $(ratingObj[j]).children().removeClass("fa-star");
@@ -74,7 +76,7 @@
         });
     };
 
-    $.fn.GetStarRating = function () {
+    $.fn.GetStarRating = function (e) {
         var ObjStarRating = $(this);
         return $(ObjStarRating).data('starrating');
     };
