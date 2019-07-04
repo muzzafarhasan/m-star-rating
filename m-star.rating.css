@@ -1,9 +1,11 @@
 /*!
- * Jquery Bootstrap Rating v0.0.1-beta
+ * Bootstrap Rating v0.0.1-beta
  * Copyright 2018-2019 Muzafar Hasan
- * JQuery Required 2.xx
- * Fontawesome Required 4.xx * 
  */
+.rating-list {
+    clear:left;
+    text-align:left;
+}
 
 .user-rating span{
 	text-align: right;
